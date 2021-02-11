@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="App8.Page1"
+             BackgroundColor="WhiteSmoke">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="20,35,20,20" BackgroundColor="Bisque">
+                <Entry x:Name="nameEntry" BackgroundColor="CornflowerBlue"
+               Placeholder="Enter name" />
+                <StackLayout>
+                    <Label x:Name="loc" TextColor="Black"/>
+                    <Button Text="Kayıt" x:Name="Btn_Clk" Clicked="btn"/>
+                </StackLayout>
+               
+                <StackLayout Padding="10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label 
+                       Text="Cariler"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
+                        <Label HorizontalOptions="Center"
+                       Text="Enlem"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
+                        <Label HorizontalTextAlignment="End"
+                       Text="Boylam"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
+                    </Grid>
+
+                </StackLayout>
+                <ListView x:Name="listView" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="{Binding Name}"
+                                                   TextColor="Black"
+                                                   Grid.Column="0"/>
+                                        <Label Text="{Binding boylam}"
+                                                   TextColor="Black"
+                                                   Grid.Column="1"/>
+                                        <Label Text="{Binding enlem}"
+                                                   TextColor="Black"
+                                                   Grid.Column="2"/>
+                                    </Grid>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

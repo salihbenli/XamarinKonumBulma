@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             x:Class="App8.mapsGo">
+    <ContentPage.Content>
+        
+            <StackLayout>
+                <Label Text="Konum Seçimi:"></Label>
+                <StackLayout Orientation="Horizontal">
+                    <Picker x:Name="_pickerLocation" ItemsSource="{Binding ID}" 
+                        Title="Lütfen bir yer seçiniz" 
+                        ItemDisplayBinding="{Binding Name}" SelectedIndex="{Binding ID}" 
+                        HorizontalOptions="FillAndExpand"></Picker>
+                </StackLayout>
+                <Button x:Name="btnKonum" Text="Seçili Konum" 
+                    Clicked="btnkonumge"></Button>
+                 <StackLayout>
+                    
+                </StackLayout>
+            </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
